@@ -23,9 +23,21 @@ class Game {
     The winner of each round is awarded 1 point, the first player to reach 2 points wins the game`)
     }
     playType() {
-    userInput = prompt("Press 1 for singleplayer or press 2 for multiplayer?");
-    
-         
+    let x = true
+    while(x === true){
+        userInput = prompt("Press 1 for singleplayer or press 2 for multiplayer");
+        if(userInput == 1){
+            x = false
+            // enter singleplayer function
+        }
+        else if(userInput == 2){
+            // enter multiplayer function
+            x = false
+        }
+        else{
+            console.log("Error! Invalid option.")
+        }
+        }
     }
 }
 
