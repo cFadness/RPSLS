@@ -1,12 +1,21 @@
 "use strict"
 
-const Player = require("./player")
+const prompt = require("prompt-sync")()
+const {Player} = require("./player")
 
 class Human extends Player{
-    constructor(aName, isWinner, manualInput){
-        super(gestures, points, aName, isWinner)
+    constructor(){
+        console.log("Please enter your name.")
+        let humanName = prompt()
+        super(humanName)
         this.manualInput = manualInput
+    }
+    humanPickGesture(){
+        pickGesture()
+        gesture = prompt()
     }
 }
 
-module.exports = Human
+module.exports = {
+    Human:Human
+}

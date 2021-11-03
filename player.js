@@ -1,13 +1,19 @@
 "use strict";
 
 class Player {
-    constructor(aName, isWinner){
-        this.gestures = ["Rock", "Paper", "Scissors", "Lizards", "Spock"];
+    constructor(aName){
+        this.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
         this.points = 0;
         this.aName = aName;
         this.isWinner = isWinner;
 
     }
+    pickGesture(){
+        console.log(`Pick a gesture ${this.gestures}. Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
+        let gesture
+    }
 }
 
-module.exports = Player;
+module.exports = {
+    Player:Player
+}
