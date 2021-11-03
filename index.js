@@ -3,6 +3,6 @@
 const prompt = require("prompt-sync")()
 const {Game} = require("./game");
 
-let rpsls = new Game;
+let rpsls = new Game("RPSLS");
 rpsls.runGame();
 

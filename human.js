@@ -10,10 +10,22 @@ class Human extends Player{
         super(humanName)
     }
     pickGesture(){
-        let userInput = prompt()
-        let gesture = this.gestures[parseInt(userInput)-1]
-        return gesture
+        let x = true
+        let userInput
+        let gesture
+        while (x){
+            userInput = prompt()
+            gesture = this.gestures[parseInt(userInput)-1]
+        if(gesture == "Rock" ||gesture == "Paper" ||gesture == "Scissors" ||gesture == "Lizard" ||gesture == "Spock"){
+            x = false 
+            return gesture  
+             
+        }
+        else {
+            console.log("Invalid entry.")
+        }
     }
+}
 }
 
 module.exports = {

@@ -5,13 +5,15 @@ const {Human} = require("./human")
 const {AI} = require("./ai")
 
 class Game {
-    constructor() {
+    constructor(aName) {
         this.playerOne
         this.playerTwo
+        this.aName = aName
+     
     }
 
     beginGame() {
-        console.log(`This game is called ${this.gameName}. The rules of the game:
+        console.log(`This game is called ${this.aName}. The rules of the game:
 
         Each player will input either "rock" "scissors" "paper" "lizard" "spock".
 
@@ -58,45 +60,56 @@ class Game {
             playerTwoChoice = this.playerTwo.pickGesture()
             if(playerOneChoice == "Rock" && (playerTwoChoice == "Scissors" || playerTwoChoice == "Lizard")){
                 this.playerOne.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerOne.aName} now has ${this.playerOne.points} point(s)`)
             }
             else if(playerOneChoice == "Scissors" && (playerTwoChoice == "Paper" || playerTwoChoice == "Lizard")){
                 this.playerOne.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerOne.aName} now has ${this.playerOne.points} point(s)`)
             }
             else if(playerOneChoice == "Paper" && (playerTwoChoice == "Rock" || playerTwoChoice == "Spock")){
                 this.playerOne.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerOne.aName} now has ${this.playerOne.points} point(s)`)
             }
             else if(playerOneChoice == "Lizard" && (playerTwoChoice == "Spock" || playerTwoChoice == "Paper")){
                 this.playerOne.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerOne.aName} now has ${this.playerOne.points} point(s)`)
             }
             else if(playerOneChoice == "Spock" && (playerTwoChoice == "Scissors" || playerTwoChoice == "Rock")){
                 this.playerOne.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerOne.aName} now has ${this.playerOne.points} point(s)`)
             }
             else if(playerTwoChoice == "Rock" && (playerOneChoice == "Scissors" || playerOneChoice == "Lizard")){
                 this.playerTwo.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerTwo.aName} now has ${this.playerTwo.points} point(s)`)
             }
             else if(playerTwoChoice == "Scissors" && (playerOneChoice == "Paper" || playerOneChoice == "Lizard")){
                 this.playerTwo.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerTwo.aName} now has ${this.playerTwo.points} point(s)`)
             }
             else if(playerTwoChoice == "Paper" && (playerOneChoice == "Rock" || playerOneChoice == "Spock")){
                 this.playerTwo.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerTwo.aName} now has ${this.playerTwo.points} point(s)`)
             }
             else if(playerTwoChoice == "Lizard" && (playerOneChoice == "Spock" || playerOneChoice == "Paper")){
                 this.playerTwo.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerTwo.aName} now has ${this.playerTwo.points} point(s)`)
             }
             else if(playerTwoChoice == "Spock" && (playerOneChoice == "Scissors" || playerOneChoice == "Rock")){
                 this.playerTwo.points += 1
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log(`${this.playerTwo.aName} now has ${this.playerTwo.points} point(s)`)
             }
             else{
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
                 console.log("Draw! No points awarded to either player.")
             }
             
