@@ -10,9 +10,10 @@ class Human extends Player{
         super(humanName)
         this.manualInput = manualInput
     }
-    humanPickGesture(){
-        pickGesture()
-        gesture = prompt()
+    pickGesture(){
+        let userInput = prompt()
+        let gesture = this.gestures[parseInt(userInput)-1]
+        return gesture
     }
 }
 

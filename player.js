@@ -10,7 +10,6 @@ class Player {
     }
     pickGesture(){
         console.log(`Pick a gesture ${this.gestures}. Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
-        let gesture
     }
 }
 

@@ -7,9 +7,10 @@ class AI extends Player{
         super(gestures, points, aName, isWinner)
         this.randomInput = randomInput
     }
-    aiPickGesture(){
-        pickGesture()
-        gesture = Math.floor(Math.random() * 5)+1
+    pickGesture(){
+        let randomInput = Math.floor(Math.random() * 5)
+        let gesture = this.gestures[randomInput]
+        return gesture
     }
 }
 
