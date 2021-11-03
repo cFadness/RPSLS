@@ -9,10 +9,10 @@ class AI extends Player{
         
     }
     pickGesture(){
-        let randomInput = Math.floor(Math.random() * 5)
-        let gesture = this.gestures[randomInput]
-        return gesture
-
+        let randomInput = Math.floor(Math.random() * this.gestures.length) //fix length?
+        this.gesture = this.gestures[randomInput]
+        // return gesture
+       
     }
 }
 

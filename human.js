@@ -12,14 +12,11 @@ class Human extends Player{
     pickGesture(){
         let x = true
         let userInput
-        let gesture
         while (x){
             userInput = prompt()
-            gesture = this.gestures[parseInt(userInput)-1]
-        if(gesture == "Rock" ||gesture == "Paper" ||gesture == "Scissors" ||gesture == "Lizard" ||gesture == "Spock"){
-            x = false 
-            return gesture  
-             
+            this.gesture = this.gestures[parseInt(userInput)-1]
+        if(this.gesture == this.gestures[0] || this.gesture == this.gestures[1] || this.gesture == this.gestures[2] || this.gesture == this.gestures[3] || this.gesture == this.gestures[4]){ // loop?
+            x = false       
         }
         else {
             console.log("Invalid entry.")

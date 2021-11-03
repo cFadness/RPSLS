@@ -56,11 +56,11 @@ class Game {
         while(this.playerOne.points < 2 && this.playerTwo.points < 2){
             console.log(`${this.playerOne.aName} Pick a gesture. \n Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
             playerOneChoice = this.playerOne.pickGesture()
-            console.log(`${this.playerTwo.aName} Pick a gesture. \n Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
+            console.log(`${this.playerTwo.aName} Pick a gesture. \n Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`) // Maybe change numbers for options.
             playerTwoChoice = this.playerTwo.pickGesture()
             if(playerOneChoice == "Rock" && (playerTwoChoice == "Scissors" || playerTwoChoice == "Lizard")){
                 this.playerOne.points += 1
-                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`)
+                console.log( `${this.playerOne.aName} has chosen ${playerOneChoice}. ${this.playerTwo.aName} has chosen ${playerTwoChoice}.`) // change out playerChoice with property. Change strings to properties
                 console.log(`${this.playerOne.aName} now has ${this.playerOne.points} point(s)`)
             }
             else if(playerOneChoice == "Scissors" && (playerTwoChoice == "Paper" || playerTwoChoice == "Lizard")){
