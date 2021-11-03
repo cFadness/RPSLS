@@ -8,7 +8,6 @@ class Human extends Player{
         console.log("Please enter your name.")
         let humanName = prompt()
         super(humanName)
-        this.manualInput = manualInput
     }
     pickGesture(){
         let userInput = prompt()

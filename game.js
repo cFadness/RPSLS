@@ -102,6 +102,22 @@ class Game {
             
         }
     }
+    declareWinner() {
+        if(this.playerOne.points == 2){
+            console.log(`${this.playerOne.aName} Winner winner chicken dinner!`)
+        }
+        else {
+            console.log(`${this.playerTwo.aName} Winner winner chicken dinner!`)
+        }
+    }
+    runGame() {
+        this.beginGame();
+        this.playType();
+        this.throwHands();
+        this.declareWinner();
+    }
 }
 
-module.exports = Game;
+module.exports = {
+    Game: Game
+}

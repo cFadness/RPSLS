@@ -5,7 +5,6 @@ class Player {
         this.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
         this.points = 0;
         this.aName = aName;
-        this.isWinner = isWinner;
 
     }
     pickGesture(){
