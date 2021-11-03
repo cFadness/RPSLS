@@ -4,8 +4,7 @@ const {Player} = require("./player")
 
 class AI extends Player{
     constructor(){
-        console.log("Please enter your name.")
-        let aiName = prompt()
+        let aiName = "Robo"
         super(aiName)
         
     }

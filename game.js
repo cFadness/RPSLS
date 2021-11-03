@@ -54,9 +54,9 @@ class Game {
         let playerOneChoice
         let playerTwoChoice
         while(this.playerOne.points < 2 && this.playerTwo.points < 2){
-            console.log(`${this.playerOne.aName} Pick a gesture. Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
+            console.log(`${this.playerOne.aName} Pick a gesture. \n Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
             playerOneChoice = this.playerOne.pickGesture()
-            console.log(`${this.playerTwo.aName} Pick a gesture. Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
+            console.log(`${this.playerTwo.aName} Pick a gesture. \n Type '1' for Rock \n Type '2' for Paper \n Type '3' for Scissors \n Type '4' for Lizard \n Type '5' for Spock`)
             playerTwoChoice = this.playerTwo.pickGesture()
             if(playerOneChoice == "Rock" && (playerTwoChoice == "Scissors" || playerTwoChoice == "Lizard")){
                 this.playerOne.points += 1
