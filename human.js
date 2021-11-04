@@ -12,18 +12,19 @@ class Human extends Player{
     pickGesture(){
         let x = true
         let userInput
-        while (x){
+        //for (let i = 0; i < this.gestures.length; i++) {
+            while (x){
             userInput = prompt()
-            this.gesture = this.gestures[parseInt(userInput)-1]
-        if(this.gesture == this.gestures[0] || this.gesture == this.gestures[1] || this.gesture == this.gestures[2] || this.gesture == this.gestures[3] || this.gesture == this.gestures[4]){ // loop?
-            x = false       
-        }
-        else {
-            console.log("Invalid entry.")
+            if(parseInt(userInput) >= 1 && parseInt(userInput) <= this.gestures.length) {
+                this.gesture = this.gestures[parseInt(userInput)-1]
+                x = false 
+            } else {
+                console.log("Invalid entry.")
+            }
         }
     }
 }
-}
+
 
 module.exports = {
     Human:Human

@@ -120,7 +120,24 @@ class Game {
         else {
             console.log(`${this.playerTwo.aName} Winner winner chicken dinner!`)
         }
+        let x = true
+        while (x) {
+        console.log("Would you like to play again? 1 for yes, 2 for no.")
+        let userInput = prompt()
+        if (userInput == 1){
+            x = false
+            this.runGame()
+        }
+        else if (userInput == 2){
+            x = false
+            console.log("Thanks for playing.")
+        }
+        else {
+            console.log("invalid entry.")
+        }
+        }
     }
+
     runGame() {
         this.beginGame();
         this.playType();
